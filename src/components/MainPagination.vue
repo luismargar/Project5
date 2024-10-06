@@ -24,10 +24,12 @@ console.log(activePage.value)
 </script>
 
 <template>
-<div>
-    <button @click="prevPage" :disabled="activePage === 1">PREV</button>
-    <button v-for="page in pages" :key="page" class="">{{ page }}</button>
-    <button @click="nextPage" :disabled="activePage === pages">NEXT</button>
+<div class="flex justify-center gap-4 p-8">
+    <button @click="prevPage" :disabled="activePage === 1" class="rounded-lg bg-orange-500 font-normal text-gray-700 shadow-md hover:bg-orange-800 hover:text-white">PREV</button>
+
+    <button v-for="page in pages" :key="page" class="rounded-lg bg-orange-500 font-normal text-gray-700 shadow-md hover:bg-orange-800 hover:text-white" :class="page === activePage? 'bg-red-700 text-white': ''">{{ page }}</button>
+
+    <button @click="nextPage" :disabled="activePage === pages" class="rounded-lg bg-orange-500 font-normal text-gray-700 shadow-md hover:bg-orange-800 hover:text-white">NEXT</button>
 </div>
 
 
