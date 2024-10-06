@@ -1,0 +1,7 @@
+<template>
+
+Card Details
+
+
+
+</template>
